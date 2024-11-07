@@ -5,7 +5,7 @@ import random
 import time
 import datetime
 from tkinter import messagebox
-import mysql.connector
+
 
 class HospitalManagementSystem:
     def __init__(self, root):
@@ -189,38 +189,6 @@ class HospitalManagementSystem:
         self.hospital_table["show"]="headings"
         self.hospital_table.pack(fill=BOTH,expand=1)
 
-        # Function to insert prescription data
-        def insert_prescription_data():
-            if all(field.get() == "" for field in [self.NameOfTablet, self.RefrenceNo, self.Dose, self.NoOfTablets, self.LotNo, self.IssueDate, self.ExpiryDate, self.DailyDose, self.SideEffects, self.FurtherInformation, self.BloodPressure, self.StorageAdvice, self.Medication, self.PatientID, self.NHSNumber, self.PatientName, self.DateOfBirth, self.PatientAddress]):
-                messagebox.showerror("Error", "All Fields are Required")
-            else:
-                conn = mysql.connector.connect(host="localhost", username="root", password="YOUR_PASSWORD", database="hms")  # Replace 'YOUR_PASSWORD' with your actual password
-                my_cursor = conn.cursor()
-
-                my_cursor.execute("INSERT INTO hms VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)", (
-                    self.NameOfTablet.get(),
-                    self.RefrenceNo.get(),
-                    self.Dose.get(),
-                    self.NoOfTablets.get(),
-                    self.LotNo.get(),
-                    self.IssueDate.get(),
-                    self.ExpiryDate.get(),
-                    self.DailyDose.get(),
-                    self.SideEffects.get(),
-                    self.FurtherInformation.get(),
-                    self.BloodPressure.get(),
-                    self.StorageAdvice.get(),
-                    self.Medication.get(),
-                    self.PatientID.get(),
-                    self.NHSNumber.get(),
-                    self.PatientName.get(),
-                    self.DateOfBirth.get(),
-                    self.PatientAddress.get(),
-                ))
-
-                conn.commit()
-                conn.close()
-                messagebox.showinfo("Success", "Prescription Data Inserted Successfully")
 
 
 root = Tk()
