@@ -1,19 +1,19 @@
-Hospital Management System
+**Hospital Management System**
 A simple Hospital Management System developed using Python and Tkinter for managing patient information, medication details, and prescriptions. The system allows users to input, update, delete, and view patient details, prescriptions, and medication information in a user-friendly graphical interface.
 
 Features
-Patient Information Management:
+**Patient Information Management:**
 
 Record patient's personal details (ID, name, address, date of birth, NHS number).
 Track patient medication details (tablet name, dosage, prescription, etc.).
-Prescription Management:
+**Prescription Management:**
 
 Generate and display patient prescriptions including medication and dosage details.
-Data Handling:
+**Data Handling:**
 
 View patient details in a table with various columns (Patient ID, Name, NHS Number, etc.).
 The system also supports updating and deleting records.
-GUI Interface:
+**GUI Interface:**
 
 Built using Python's Tkinter library to provide a desktop-based graphical user interface (GUI).
 Technologies Used
@@ -25,19 +25,19 @@ ttk: For styling the widgets, such as ComboBoxes and Treeview.
 Installation
 To use the Hospital Management System, you will need Python 3.x installed on your system. Follow these steps:
 
-1. Install Python 3.x (if not already installed):
+**1. Install Python 3.x (if not already installed):**
 Download and install Python 3 from official Python website.
-2. Clone the repository:
+**2. Clone the repository:**
 Open a terminal/command prompt and run the following command:
 
 bash
 Copy code
-git clone https://github.com/your-username/hospital-management-system.git
-3. Navigate to the project directory:
+git clone https://github.com/thenortherncoaster/Python2.git
+**3. Navigate to the project directory:**
 bash
 Copy code
 cd hospital-management-system
-4. Install required packages:
+**4. Install required packages:**
 This project relies on the Tkinter library, which is typically included with Python. If it's not installed, you can install it using:
 
 For Windows:
